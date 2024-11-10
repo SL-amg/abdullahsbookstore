@@ -12,6 +12,7 @@ body{
 .picture{
   position: absolute;
   z-index: -1;
-  height: 100%;
+  height: auto;
   width: 100%;
+/* to have the wide change we use width 100%, and hight auto */
 }

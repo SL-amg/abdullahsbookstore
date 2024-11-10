@@ -1,15 +1,18 @@
 
 import './App.css';
+import storeimage from"./istockphoto-874114336-612x612.jpg"
 
 function App() {
   return (
 
 
-    <div class="mainbody">
-
-      <h1 class="mainheading">Abdullah's BookStore</h1>
-      <h3 class="mainheading">Best place to Learn</h3>
-      <img class="picture" src='https://media.istockphoto.com/id/874114336/photo/books-store-exterior.jpg?s=612x612&w=0&k=20&c=Mp4Hlr_OHS55IfVAZI3rQPc9Ge3sKk4tI04MsVMogaM=' alt='Bookstore front picture'></img>
+    <div className="mainbody">    {/* always use classname not class to avoid conflex in future */}
+      {/* the main header */}
+      <h1 className="mainheading">Abdullah's BookStore</h1>
+      <h3 className="mainheading">Best place to Learn</h3>
+      <p className="mainheading">This is a bookstore created by Abdullah Salah Al Abbas</p>
+      {/* The picture */}
+      <img className="picture" src={storeimage} alt='Bookstore front picture'></img>
     </div>
   );
 }

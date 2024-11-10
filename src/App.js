@@ -1,18 +1,18 @@
 
 import './App.css';
-import storeimage from"./istockphoto-874114336-612x612.jpg"
+import storeimage from"./istockphoto-874114336-612x612.jpg"     /* to add image .. add image in src and then write import -name- then from "location" */
 
 function App() {
   return (
 
 
-    <div className="mainbody">    {/* always use classname not class to avoid conflex in future */}
+    <div className="body">    {/* always use classname not class to avoid conflex in future */}
       {/* the main header */}
-      <h1 className="mainheading">Abdullah's BookStore</h1>
-      <h3 className="mainheading">Best place to Learn</h3>
-      <p className="mainheading">This is a bookstore created by Abdullah Salah Al Abbas</p>
+      <h1 className="mainHeading">Abdullah's BookStore</h1>
+      <h3 className="mainHeading">Best place to Learn</h3>
+      <p className="mainHeading">This is a bookstore created by Abdullah Salah Al Abbas</p>
       {/* The picture */}
-      <img className="picture" src={storeimage} alt='Bookstore front picture'></img>
+      <img className="imageDim" src={storeimage} alt='Bookstore front picture'></img>   {/* to call picture we use src={-name-} */}
     </div>
   );
 }

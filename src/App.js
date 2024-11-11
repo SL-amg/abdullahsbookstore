@@ -20,25 +20,16 @@ function App() {
 
       <div className='ProductsList'> {/* Products Div consisi of 2 main divs one for each item*/}
 
-        <div className='BookContainer'> {/* first book */}
-          <div >{/* first book picture*/}
-            <img className='BookPoster' src={products[0].image} alt ={products[0].name}></img>
+          {products.map((product)=>
+          (
+            <div className='BookContainer'>
+            <img className='BookPoster' src={product.image} alt ={product.name}></img>
+            <h3 className='BookInfo'>{product.name}</h3>
+            <p className='BookInfo' >{product.price}</p>
           </div>
-          <div className='BookInfo'>{/* first book details and price*/}
-          <h3 >{products[0].name}</h3>
-          <p >{products[0].price}</p>
-          </div> 
-        </div>
-
-        <div className='BookContainer'> {/* Second book */}
-        <div >{/* second book picture*/}
-            <img className='BookPoster' src={products[1].image} alt ={products[1].name} ></img>
-          </div>
-          <div className='BookInfo'>{/* Second book details and price*/}
-          <h3 >{products[1].name} </h3> {/* to call second one we uses object[ref].name*/}
-          <p >{products[1].price}</p>
-          </div> 
-        </div>
+          )
+           
+        )}
 
       </div>
 
@@ -48,3 +39,26 @@ function App() {
 }
 
 export default App;
+
+
+// this is part 2 task as refreance for me only not to be graded please 
+
+{/* <div className='BookContainer'> /* first book 
+<div >/* first book picture
+  <img className='BookPoster' src={products[0].image} alt ={products[0].name}></img>
+</div>
+<div className='BookInfo'>/* first book details and price*
+<h3 >{products[0].name}</h3>
+<p >{products[0].price}</p>
+</div> 
+</div> */}
+
+       {/* <div className='BookContainer'> /* Second book 
+        <div >/* second book picture*
+            <img className='BookPoster' src={products[1].image} alt ={products[1].name} ></img>
+          </div>
+          <div className='BookInfo'>/* Second book details and price
+          <h3 >{products[1].name} </h3> /* to call second one we uses object[ref].name
+          <p >{products[1].price}</p>
+          </div> 
+        </div>  */}

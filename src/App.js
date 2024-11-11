@@ -5,9 +5,11 @@ import products from './products'; /* to import the array from products.js */
 
 function App() {
 
+  {/* this is JS area Note to my self */}
+
   const productList = products.map((product) => { /* to map the products arrays using product variable */ 
     return (
-      <div className='BookContainer'> {/* one div in map */}
+      <div className='BookContainer'> /* one div in map */
         <img className='BookPoster' src={product.image} alt={product.name}></img> {/* to call produt image, we use product.image not products */}
         <h3 className='BookInfo'>{product.name}</h3>
         <p className='BookInfo' >{product.price}</p>
@@ -16,6 +18,7 @@ function App() {
   });
 
 
+  {/* this is JSX area Note to my self */}
 
   return (
 
@@ -40,6 +43,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 // this is part 2 task as refreance for me only not to be graded please 

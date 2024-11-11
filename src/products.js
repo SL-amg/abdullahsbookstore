@@ -24,7 +24,7 @@ const products = [
 },
 {
     name:"Harry Potter",
-    price:"1 KD",
+    price:"0.500 KD",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmow8QGoUxQCbdE70iUNub8ObBYINje0kpg&s"
 },
 ]

@@ -9,7 +9,7 @@ function App() {
 
   const productList = products.map((product) => { /* to map the products arrays using product variable */ 
     return (
-      <div className='BookContainer'> /* one div in map */
+      <div className='BookContainer'> {/* one div in map */}
         <img className='BookPoster' src={product.image} alt={product.name}></img> {/* to call produt image, we use product.image not products */}
         <h3 className='BookInfo'>{product.name}</h3>
         <p className='BookInfo' >{product.price}</p>

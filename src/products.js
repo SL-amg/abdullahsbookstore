@@ -27,6 +27,11 @@ const products = [
     price:"0.500 KD",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmow8QGoUxQCbdE70iUNub8ObBYINje0kpg&s"
 },
+{
+    name:"Batman",
+    price:"1000 KD",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3aducgTJ2RORwcAj7Ij6kS8-ppLuY9LDQ7Q&s"
+},
 ]
 
 export default products; // to export the array

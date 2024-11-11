@@ -4,33 +4,34 @@ import storeimage from "./istockphoto-874114336-612x612.jpg"     /* to add image
 import products from './products'; /* to import the array from products.js */
 
 function App() {
-  return (
 
+  const productList = products.map((product) => { /* to map the products arrays using product variable */ 
+    return (
+      <div className='BookContainer'> {/* one div in map */}
+        <img className='BookPoster' src={product.image} alt={product.name}></img> {/* to call produt image, we use product.image not products */}
+        <h3 className='BookInfo'>{product.name}</h3>
+        <p className='BookInfo' >{product.price}</p>
+      </div>
+    );
+  });
+
+
+
+  return (
 
     <div className="MainPageBody">    {/* always use classname not class to avoid conflex in future */}
       <div> {/* the main header */}
-        <h1 className="mainHeading">Abdullah's BookStore</h1>
+        <h1 className="mainHeading">Abdullah's Book Store</h1>
         <h3 className="mainHeading">Best place to Learn</h3>
         <p className="mainHeading">This is a book store created by Abdullah Salah Al Abbas as</p>
       </div>
-      <div>   {/* The picture Div */}
+      <div>   {/* The main picture Div */}
         <img className="imageDim" src={storeimage} alt='Bookstore front picture'></img>   {/* to call picture we use src={-name-} */}
       </div>
 
-
-      <div className='ProductsList'> {/* Products Div consisi of 2 main divs one for each item*/}
-
-          {products.map((product)=> /* to map the products arrays using product variable */
-          (
-            <div className='BookContainer'> {/* one div in map */}
-            <img className='BookPoster' src={product.image} alt ={product.name}></img> {/* to call produt image, we use product.image not products */}
-            <h3 className='BookInfo'>{product.name}</h3>
-            <p className='BookInfo' >{product.price}</p>
-          </div>
-          )
-           
-        )}
-
+      {/* The products Div updated from Array and Map in JS area */}
+      <div className='ProductsList'>
+        {productList}
       </div>
 
     </div>
@@ -53,7 +54,7 @@ export default App;
 </div> 
 </div> */}
 
-       {/* <div className='BookContainer'> /* Second book 
+{/* <div className='BookContainer'> /* Second book 
         <div >/* second book picture*
             <img className='BookPoster' src={products[1].image} alt ={products[1].name} ></img>
           </div>

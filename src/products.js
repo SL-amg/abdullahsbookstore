@@ -9,7 +9,7 @@ const products = [
 },
 {
     name:"Charlie and the Chocolate",
-    price:"30 KD",
+    price:"12 KD",
     image:"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1309211401i/6310.jpg"
 },
 {
@@ -22,5 +22,11 @@ const products = [
     price:"9 KD",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmow8QGoUxQCbdE70iUNub8ObBYINje0kpg&s"
 },
+{
+    name:"Electrical Engineering",
+    price:"100 KD",
+    image:"https://m.media-amazon.com/images/I/61VkoauwY1L._AC_UF1000,1000_QL80_.jpg"
+},
+
 ]
 export default products; // to export the array

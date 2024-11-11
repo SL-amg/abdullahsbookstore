@@ -17,8 +17,8 @@
 }
 
 .ProductsList{
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* make them in a row */
+  flex-wrap: wrap; /* to make them in a row and move down when changing size */
   align-items: center;
   justify-content: center;
 }
@@ -38,7 +38,7 @@
 }
 
 .Bookinfo{
-  color: white;
+  color: rgb(255, 255, 255);
 
 }
 

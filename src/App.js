@@ -2,18 +2,14 @@
 import './App.css';
 import storeimage from "./istockphoto-874114336-612x612.jpg"     /* to add image .. add image in src and then write import -name- then from "location" */
 import products from './products'; /* to import the array from products.js */
+import ProductItem from './Components/ProductItem';
 
 function App() {
 
   {/* this is JS area Note to my self */}
 
-  const productList = products.map((product, index) => { /* to map the products arrays using product variable, added key and index to avoid any errors */ 
-    return (
-      <div key = {index} className='BookContainer'> {/* one div in map */}
-        <img className='BookPoster' src={product.image} alt={product.name}></img> {/* to call produt image, we use product.image not products */}
-        <h3 className='BookInfo'>{product.name}</h3>
-        <p className='BookInfo' >{product.price}</p>
-      </div>
+  const productList = products.map((product, index) => { 
+    return ( <ProductItem/>
     );
   });
 
@@ -32,9 +28,10 @@ function App() {
         <img className="imageDim" src={storeimage} alt='Bookstore front picture'></img>   {/* to call picture we use src={-name-} */}
       </div>
 
-      {/* The products Div updated from Array and Map in JS area */}
+  
+      {/* The products Div updated from a component */}
       <div className='ProductsList'>
-        {productList}
+      <ProductItem/>
       </div>
 
     </div>
@@ -68,3 +65,18 @@ export default App;
           <p >{products[1].price}</p>
           </div> 
         </div>  */}
+
+
+/* task 4 solution
+    /* The products Div updated from Array and Map in JS area coming from products.js */
+    /* <div className='ProductsList'>
+    {productList}
+  </div> */
+
+ /* this is in the map
+ 
+ <div key = {index} className='BookContainer'> {/* one div in map */
+ /* <img className='BookPoster' src={product.image} alt={product.name}></img> {/* to call produt image, we use product.image not products */
+  /* <h3 className='BookInfo'>{product.name}</h3>
+ /* <p className='BookInfo' >{product.price}</p>
+/* </div> */

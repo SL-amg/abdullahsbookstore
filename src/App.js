@@ -20,10 +20,10 @@ function App() {
 
       <div className='ProductsList'> {/* Products Div consisi of 2 main divs one for each item*/}
 
-          {products.map((product)=>
+          {products.map((product)=> /* to map the products arrays using product variable */
           (
-            <div className='BookContainer'>
-            <img className='BookPoster' src={product.image} alt ={product.name}></img>
+            <div className='BookContainer'> {/* one div in map */}
+            <img className='BookPoster' src={product.image} alt ={product.name}></img> {/* to call produt image, we use product.image not products */}
             <h3 className='BookInfo'>{product.name}</h3>
             <p className='BookInfo' >{product.price}</p>
           </div>
